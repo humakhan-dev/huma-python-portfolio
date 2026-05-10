@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+
+<!-- ── PAGE HEADER ────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero__tag">About Me</span>
+    <h1 class="page-hero__title">The developer<br><span class="accent">behind the code.</span></h1>
+  </div>
+</section>
+
+<!-- ── INTRO ──────────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container about-intro">
+    <div class="about-avatar">
+      <!-- Replace the emoji with an <img> tag when you have a photo -->
+      <div class="avatar-placeholder">👨‍💻</div>
+    </div>
+    <div class="about-intro__text">
+      <h2>Hi, I'm Huma Khan</h2>
+      <p>
+        I'm a Python developer from Vehari, with a Bachelor of Science in
+        Information Technology. I started learning Python because I wanted to
+        automate boring tasks — and then I couldn't stop.
+      </p>
+      <p>
+        I enjoy building things that actually work and actually help people.
+        Whether it's a small CLI script or a full Flask web app, I care about
+        writing clean, readable code that I can be proud of.
+      </p>
+      <p>
+        I'm actively looking for junior developer roles or freelance projects
+        where I can contribute and keep growing.
+      </p>
+      <a href="#" class="btn btn--primary" download>Download Resume</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ──────────────────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2018 – 2022</span>
+          <h3>Bachelor of Science in Information Technology</h3>
+          <p class="timeline-org">University of Education</p>
+          <p>Studied software development, networking, databases, and systems
+             analysis. Final year project: a Python-based student management system.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2022 – Present</span>
+          <h3>Self-Taught Python Developer</h3>
+          <p class="timeline-org">Online Learning (Coursera, freeCodeCamp, YouTube)</p>
+          <p>Completed courses in Flask, REST APIs, Git, and Python best practices.
+             Building real projects to apply what I learn.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ─────────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Skills &amp; Tools</h2>
+    <div class="skills-grid">
+      {% for category, items in skills.items() %}
+      <div class="skill-group">
+        <h3 class="skill-group__title">{{ category }}</h3>
+        <ul class="skill-group__list">
+          {% for item in items %}
+          <li class="skill-tag">{{ item }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── LEARNING JOURNEY ────────────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container">
+    <h2 class="section-title">My Learning Journey</h2>
+    <div class="journey-cards">
+
+      <div class="journey-card">
+        <div class="journey-card__icon">🐣</div>
+        <h3>Beginner Phase</h3>
+        <p>Started with Python basics: variables, loops, functions, and
+           file I/O. Completed the CS50P course.</p>
+      </div>
+
+      <div class="journey-card">
+        <div class="journey-card__icon">🔨</div>
+        <h3>Building Phase</h3>
+        <p>Moved on to OOP, APIs, web scraping, and Git. Started building
+           real mini-projects from scratch.</p>
+      </div>
+
+      <div class="journey-card">
+        <div class="journey-card__icon">🌐</div>
+        <h3>Web Phase</h3>
+        <p>Learned Flask, HTML/CSS, Jinja2 templating, and deployed my first
+           web application to Render.</p>
+      </div>
+
+      <div class="journey-card">
+        <div class="journey-card__icon">🚀</div>
+        <h3>Growth Phase</h3>
+        <p>Currently learning Django, PostgreSQL, and Docker. Aiming for a
+           junior developer role.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Virtual environment — never commit this folder!
+venv/
+env/
+.env/
+
+# Environment variables — keep secrets OUT of GitHub
+.env
+
+# VS Code settings (optional to commit)
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

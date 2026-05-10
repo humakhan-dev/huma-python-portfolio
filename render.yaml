@@ -1,0 +1,13 @@
+# render.yaml — Tells Render.com how to deploy your Flask app for FREE.
+# This file lives in the root of your project.
+
+services:
+  - type: web
+    name: my-portfolio
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0

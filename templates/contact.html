@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<!-- ── PAGE HEADER ────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero__tag">Contact</span>
+    <h1 class="page-hero__title">Let's<br><span class="accent">talk code.</span></h1>
+    <p class="page-hero__sub">
+      Got a project idea, a job offer, or just want to say hi?
+      Fill out the form and I'll get back to you soon.
+    </p>
+  </div>
+</section>
+
+<!-- ── CONTACT SECTION ────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container contact-grid">
+
+    <!-- LEFT: contact info -->
+    <div class="contact-info">
+      <h2>Other ways to reach me</h2>
+
+      <div class="contact-item">
+        <span class="contact-item__icon">📧</span>
+        <div>
+          <strong>Email</strong>
+          <p><a href="mailto:your@email.com">humakhanvhr@gmail.com</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-item__icon">🐙</span>
+        <div>
+          <strong>GitHub</strong>
+          <p><a href="https://github.com/humakhan-dev" target="_blank" rel="noopener">github.com/humakhan-dev</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-item__icon">💼</span>
+        <div>
+          <strong>LinkedIn</strong>
+          <p><a href="https://www.linkedin.com/in/huma-khan528/" target="_blank" rel="noopener">linkedin.com/in/huma-khan528</a></p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <span class="contact-item__icon">📍</span>
+        <div>
+          <strong>Location</strong>
+          <p>Vehari, Pakistan</p>
+        </div>
+      </div>
+
+      <div class="availability">
+        <span class="availability__dot"></span>
+        Available for freelance &amp; junior roles
+      </div>
+    </div>
+
+    <!-- RIGHT: contact form -->
+    <div class="contact-form-wrap">
+      <form class="contact-form" method="POST" action="{{ url_for('contact') }}">
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name"
+                 placeholder="John Doe" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email"
+                 placeholder="john@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6"
+                    placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--full">
+          Send Message →
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

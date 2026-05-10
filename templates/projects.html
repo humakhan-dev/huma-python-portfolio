@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+<!-- ── PAGE HEADER ────────────────────────────────────────────────────── -->
+<section class="page-hero">
+  <div class="container">
+    <span class="page-hero__tag">Projects</span>
+    <h1 class="page-hero__title">Things I've<br><span class="accent">built & shipped.</span></h1>
+    <p class="page-hero__sub">
+      A collection of Python projects — from CLI tools to Flask web apps.
+      All source code is on GitHub.
+    </p>
+  </div>
+</section>
+
+<!-- ── ALL PROJECTS ────────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+
+    <!-- Filter buttons (JS-powered, no page reload needed) -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Flask">Flask</button>
+      <button class="filter-btn" data-filter="CLI">CLI</button>
+      <button class="filter-btn" data-filter="API">API</button>
+      <button class="filter-btn" data-filter="OOP">OOP</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      {% for project in projects %}
+      <article class="project-card" data-tags="{{ project.tech | join(',') }}">
+        <div class="project-card__header">
+          <span class="project-card__emoji">{{ project.emoji }}</span>
+          {% if project.featured %}
+          <span class="badge badge--featured">Featured</span>
+          {% endif %}
+        </div>
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <p class="project-card__desc">{{ project.description }}</p>
+        <div class="project-card__tags">
+          {% for tag in project.tech %}
+          <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-card__footer">
+          <a href="{{ project.github }}" class="btn btn--sm btn--ghost"
+             target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+          {% if project.demo %}
+          <a href="{{ project.demo }}" class="btn btn--sm btn--primary"
+             target="_blank" rel="noopener">
+            Live Demo
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA ────────────────────────────────────────────────────────────── -->
+<section class="section section--alt">
+  <div class="container cta-block">
+    <h2>Want to build something together?</h2>
+    <p>I'm open to collaboration, freelance work, and junior developer roles.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn--primary">Get In Touch</a>
+  </div>
+</section>
+
+{% endblock %}
