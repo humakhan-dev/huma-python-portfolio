@@ -1,7 +1,39 @@
-# 🐍 Python Flask Portfolio Website
+# 🐍 Huma Khan — Python Portfolio Website
 
-A clean, modern personal portfolio built with **Python + Flask**.  
-Includes Home, About, Projects, and Contact pages.
+A modern developer portfolio website built using **Python, Flask, HTML, CSS, and JavaScript**.
+
+This portfolio showcases my Python projects, Flask development skills, web applications, and frontend design in a clean and responsive interface.
+
+---
+
+## 🌐 Live Demo
+
+🔗 https://huma-python-portfolio.onrender.com/
+
+---
+
+## ✨ Features
+
+- Responsive modern UI
+- Flask backend integration
+- Home, About, Projects, and Contact pages
+- Project showcase section
+- Mobile-friendly layout
+- Clean developer-style interface
+- GitHub project integration
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- Flask
+- HTML5
+- CSS3
+- JavaScript
+- Jinja2 Templates
+- Render Deployment
+- Git & GitHub
 
 ---
 
@@ -31,6 +63,19 @@ portfolio/
 ```
 
 ---
+
+---
+
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Projects Section
+![Projects](screenshots/projects.png)
+
+### Contact Page
+![Contact](screenshots/contact.png)
 
 ## 🚀 Run Locally (VS Code)
 
@@ -84,7 +129,7 @@ git push -u origin main
 
 ---
 
-## ☁️ Deploy FREE on Render.com
+## ☁️ Deployment
 
 1. Go to https://render.com and sign up (free)
 2. Click **New → Web Service**
@@ -94,7 +139,6 @@ git push -u origin main
 6. Your URL will be: `https://my-portfolio.onrender.com`
 
 > ⚠️ Free tier sleeps after 15 min of inactivity — first load is slow.
-> Upgrade to Starter ($7/mo) to keep it always-on.
 
 ---
 
